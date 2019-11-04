@@ -1,0 +1,33 @@
+{
+  "name": "bedrock-payment",
+  "version": "0.0.1",
+  "description": "Backend payment services for Bedrock.",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digitalbazaar/bedrock-payment.git"
+  },
+  "keywords": [
+    "Payment",
+    "Bedrock",
+    "MongoDB",
+    "Javascript"
+  ],
+  "author": "DigitalBazaar",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/digitalbazaar/bedrock-payment/issues"
+  },
+  "homepage": "https://github.com/digitalbazaar/bedrock-payment#readme",
+  "devDependencies": {
+    "eslint": "^6.6.0",
+    "eslint-config-digitalbazaar": "^2.0.1",
+    "eslint-plugin-jsdoc": "^17.1.0"
+  }
+}
