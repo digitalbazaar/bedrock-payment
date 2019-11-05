@@ -40,7 +40,7 @@ config.bedrock_payment.services = ['my-payment-gateway'];
 config.bedrock_payment.orderProcessor = 'my-order-processor';
 
 bedrockPayment.use('paypal', require('bedrock-payment-my-gateway'));
-bedrockPayment.use('plans', require('../lib/my-order-processor.js'));
+bedrockPayment.use('my-order-processor', require('../lib/my-order-processor.js'));
 
 ```
 
