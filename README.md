@@ -16,13 +16,32 @@
 ## Install
 
 ```sh
-npm install
+npm install --save bedrock-payment bedrock-payment-http bedrock-web-payment
 ```
 
 ## Usage
 
+Provides an interface for bedrock payments and the database.
+You will need to pick your own plugin for a payment gateway.
+Example:
+
 ```sh
-Should be used with other bedrock-payment modules to allow your application to accept payments.
+npm install --save bedrock-payment-paypal
+```
+
+In your configs/ dir you will need to configure bedrock-payment
+```js
+const {config} = require('bedrock');
+const bedrockPayment = require('bedrock-payment');
+
+// this is used by the validator to ensure you
+// can not post a service not supported by the current project.
+config.bedrock_payment.services = ['my-payment-gateway'];
+config.bedrock_payment.orderProcessor = 'my-order-processor';
+
+bedrockPayment.use('paypal', require('bedrock-payment-my-gateway'));
+bedrockPayment.use('plans', require('../lib/my-order-processor.js'));
+
 ```
 
 ## Author
