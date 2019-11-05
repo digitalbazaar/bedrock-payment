@@ -44,6 +44,8 @@ bedrockPayment.use('my-order-processor', require('../lib/my-order-processor.js')
 
 ```
 
+Methods should be documented in files.
+
 ## Author
 
 👤 **Digital Bazaar, Inc.**
