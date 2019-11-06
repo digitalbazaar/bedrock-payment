@@ -37,6 +37,8 @@ const bedrockPayment = require('bedrock-payment');
 // this is used by the validator to ensure you
 // can not post a service not supported by the current project.
 config.bedrock_payment.services = ['my-payment-gateway'];
+// this is used by bedrock-payment-http to figure out which
+// orderProcessor to use.
 config.bedrock_payment.orderProcessor = 'my-order-processor';
 
 bedrockPayment.use('paypal', require('bedrock-payment-my-gateway'));
